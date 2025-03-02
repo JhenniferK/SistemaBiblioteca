@@ -90,4 +90,7 @@ Este projeto está em constante evolução e há várias melhorias que podem ser
 
 6. **Melhorias de Performance**:
    - Analisar e otimizar o desempenho do sistema, especialmente em operações que envolvem consultas ao banco de dados.
+   
+---
 
+🖤 **Obrigada por visitar este repositório!**
