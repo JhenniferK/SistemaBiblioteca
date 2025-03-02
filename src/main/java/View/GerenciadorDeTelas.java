@@ -1,5 +1,10 @@
 package View;
 
+import DAO.EmprestimoDAO;
+import DAO.LeitorDAO;
+import DAO.LivroDAO;
+import DAO.MultaDAO;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -37,6 +42,10 @@ public class GerenciadorDeTelas {
             GerenciadorDeTelas gerenciador = new GerenciadorDeTelas();
             gerenciador.addTela("TelaInicial", new TelaInicial(gerenciador));
             gerenciador.addTela("TelaFuncoes", new TelaFuncoes(gerenciador));
+            gerenciador.addTela("TelaBuscarLivro", new TelaBuscarLivro(gerenciador, new LivroDAO()));
+            gerenciador.addTela("TelaBuscarEmprestimo", new TelaBuscarEmprestimo(gerenciador, new EmprestimoDAO()));
+            gerenciador.addTela("TelaBuscarLeitor", new TelaBuscarLeitor(gerenciador, new LeitorDAO()));
+            gerenciador.addTela("TelaBuscarMulta", new TelaBuscarMulta(gerenciador, new MultaDAO()));
             gerenciador.addTela("TelaListarLeitores", new TelaListarLeitores(gerenciador));
             gerenciador.addTela("TelaListarLivros", new TelaListarLivros(gerenciador));
             gerenciador.addTela("TelaListarEmprestimos", new TelaListarEmprestimos(gerenciador));

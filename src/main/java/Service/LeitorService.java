@@ -3,12 +3,20 @@ package Service;
 import DAO.LeitorDAO;
 import Model.Leitor;
 
+import java.util.List;
+
 public class LeitorService {
     private LeitorDAO leitorDAO;
 
-    public LeitorService(LeitorDAO leitorDAO) {
-        this.leitorDAO = leitorDAO;
+    public LeitorService() {
+        this.leitorDAO = new LeitorDAO();
     }
 
-    //outros méodos
+    public Leitor buscarLeitor(String cpf) {
+        return leitorDAO.buscar(cpf);
+    }
+
+    public List<Leitor> listarLeitores() {
+        return leitorDAO.listarLeitores();
+    }
 }

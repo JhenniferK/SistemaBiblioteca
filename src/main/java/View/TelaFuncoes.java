@@ -57,6 +57,22 @@ public class TelaFuncoes extends JPanel {
             card.add(button);
             card.add(Box.createRigidArea(new Dimension(0, 10)));
 
+            if (label.equals("Buscar") && title.equals("Leitores")) {
+                button.addActionListener(e -> gerenciador.mostrarTela("TelaBuscarLeitor"));
+            }
+
+            if (label.equals("Buscar") && title.equals("Livros")) {
+                button.addActionListener(e -> gerenciador.mostrarTela("TelaBuscarLivro"));
+            }
+
+            if (label.equals("Buscar") && title.equals("Empréstimos")) {
+                button.addActionListener(e -> gerenciador.mostrarTela("TelaBuscarEmprestimo"));
+            }
+
+            if (label.equals("Buscar") && title.equals("Multas")) {
+                button.addActionListener(e -> gerenciador.mostrarTela("TelaBuscarMulta"));
+            }
+
             if (label.equals("Listar") && title.equals("Leitores")) {
                 button.addActionListener(e -> gerenciador.mostrarTela("TelaListarLeitores"));
             }
